@@ -49,8 +49,10 @@ export class EnkaAssetWrapper {
       const apiResponse = await this.apiClient.getPlayerData(uid);
 
       // Map to processed assets
-      const processedAssets =
-        await this.assetMapper.mapPlayerAssets(apiResponse);
+      const processedAssets = await this.assetMapper.mapPlayerAssets(
+        apiResponse,
+        uid,
+      );
 
       // Cache the result
       this.cacheManager.cachePlayerData(uid, processedAssets);
@@ -73,7 +75,7 @@ export class EnkaAssetWrapper {
   ): Promise<ProcessedPlayerAssets> {
     try {
       const apiResponse = await this.apiClient.getPlayerData(uid);
-      return await this.assetMapper.mapPlayerAssets(apiResponse);
+      return await this.assetMapper.mapPlayerAssets(apiResponse, uid);
     } catch (error) {
       if (error instanceof EnkaApiError || error instanceof EnkaMappingError) {
         throw error;

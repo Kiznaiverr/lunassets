@@ -27,6 +27,7 @@ export class EnkaAssetMapper {
    */
   async mapPlayerAssets(
     apiResponse: EnkaApiResponse,
+    uid: string | number,
   ): Promise<ProcessedPlayerAssets> {
     const { playerInfo } = apiResponse;
 
@@ -47,6 +48,7 @@ export class EnkaAssetMapper {
 
     return {
       playerInfo: {
+        uid: uid.toString(),
         nickname: playerInfo.nickname,
         level: playerInfo.level,
         signature: playerInfo.signature,

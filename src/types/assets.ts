@@ -60,6 +60,7 @@ export interface ProcessedShowAvatar {
 // Final result
 export interface ProcessedPlayerAssets {
   playerInfo: {
+    uid: string;
     nickname: string;
     level: number;
     signature?: string;
