@@ -1,0 +1,36 @@
+{
+  "name": "lunassets",
+  "version": "1.0.0",
+  "description": "Luna's asset finder wrapper library for Enka Network API - Easy access to Genshin Impact player assets and data",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "npx ts-node src/test.ts",
+    "start": "npm run build && node dist/index.js"
+  },
+  "keywords": [
+    "luna",
+    "enka",
+    "genshin",
+    "api",
+    "assets",
+    "wrapper"
+  ],
+  "author": "kiznavierr",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kiznaiverr/lunassets.git"
+  },
+  "homepage": "https://github.com/Kiznaiverr/lunassets",
+  "bugs": {
+    "url": "https://github.com/Kiznaiverr/lunassets/issues"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0"
+  }
+}
