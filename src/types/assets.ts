@@ -29,7 +29,7 @@ export interface PfpData {
 
 export interface NameCardData {
   [nameCardId: string]: {
-    icon: string;
+    Icon: string;
   };
 }
 

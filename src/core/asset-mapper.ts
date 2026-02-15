@@ -88,7 +88,6 @@ export class EnkaAssetMapper {
       );
     }
 
-    // IconPath di pfps.json sudah include full path dan extension
     const url = `https://enka.network${pfpData.IconPath}`;
 
     return {
@@ -112,11 +111,13 @@ export class EnkaAssetMapper {
       );
     }
 
-    const url = this.urlBuilder.buildNameCardUrl(nameCardData.icon);
+    // Remote data uses "Icon" field with full path and extension
+    const iconPath = nameCardData.Icon;
+    const url = `https://enka.network${iconPath}`;
 
     return {
       id: nameCardId,
-      iconName: nameCardData.icon,
+      iconName: iconPath,
       url,
     };
   }
