@@ -154,7 +154,7 @@ export class EnkaAssetMapper {
       url,
       quality,
       level,
-      talentLevel,
+      talentLevel: talentLevel ?? 0,
       element: characterData.Element,
       weaponType: characterData.WeaponType,
     };
