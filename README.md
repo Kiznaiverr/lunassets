@@ -32,6 +32,7 @@ getPlayerData();
 ```json
 {
   "playerInfo": {
+    "uid": "856012067",
     "nickname": "Kiznavierr",
     "level": 60,
     "signature": "sometimes even reality is a lie",
